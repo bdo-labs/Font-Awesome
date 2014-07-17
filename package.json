@@ -2,10 +2,18 @@
   "name": "font-awesome",
   "description": "The iconic font and CSS framework",
   "version": "4.1.0",
-  "keywords": ["font", "awesome", "fontawesome", "icon", "font", "bootstrap"],
+  "style": "css/font-awesome.css",
+  "keywords": [
+    "font",
+    "awesome",
+    "fontawesome",
+    "icon",
+    "font",
+    "bootstrap"
+  ],
   "homepage": "http://fontawesome.io/",
   "bugs": {
-    "url" : "http://github.com/FortAwesome/Font-Awesome/issues"
+    "url": "http://github.com/FortAwesome/Font-Awesome/issues"
   },
   "author": {
     "name": "Dave Gandy",
@@ -40,9 +48,24 @@
       "url": "http://opensource.org/licenses/mit-license.html"
     }
   ],
-  "dependencies": {
+  "dependencies": {},
+  "engines": {
+    "node": ">=0.10.3"
   },
-  "engines" : {
-    "node" : ">=0.10.3"
+  "atomify": {
+    "assets": {
+      "prefix": "build/assets",
+      "dest": "build/assets"
+    },
+    "css": {
+      "entry": "css/font-awesome.css",
+      "output": "build/build.css"
+    }
+  },
+  "devDependencies": {
+    "atomify": "^3.1.6",
+    "handlebars": "^1.3.0",
+    "hbsfy": "^1.3.2",
+    "resrcify": "^1.0.1"
   }
 }
